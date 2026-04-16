@@ -10,7 +10,6 @@ instruccion
     | buscar PUNTO_Y_COMA?
     | actualizar PUNTO_Y_COMA?
     | eliminar PUNTO_Y_COMA?
-    | mostrarColecciones PUNTO_Y_COMA?
     ;
 
 crearColeccion
@@ -31,10 +30,6 @@ actualizar
 
 eliminar
     : ELIMINAR DE IDENTIFICADOR condicionDonde?
-    ;
-
-mostrarColecciones
-    : MOSTRAR COLECCIONES
     ;
 
 condicionDonde

@@ -71,15 +71,6 @@ class LenguajeNoRelacionalListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by LenguajeNoRelacionalParser#mostrarColecciones.
-    def enterMostrarColecciones(self, ctx:LenguajeNoRelacionalParser.MostrarColeccionesContext):
-        pass
-
-    # Exit a parse tree produced by LenguajeNoRelacionalParser#mostrarColecciones.
-    def exitMostrarColecciones(self, ctx:LenguajeNoRelacionalParser.MostrarColeccionesContext):
-        pass
-
-
     # Enter a parse tree produced by LenguajeNoRelacionalParser#condicionDonde.
     def enterCondicionDonde(self, ctx:LenguajeNoRelacionalParser.CondicionDondeContext):
         pass

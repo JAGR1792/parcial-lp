@@ -44,11 +44,6 @@ class LenguajeNoRelacionalVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by LenguajeNoRelacionalParser#mostrarColecciones.
-    def visitMostrarColecciones(self, ctx:LenguajeNoRelacionalParser.MostrarColeccionesContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by LenguajeNoRelacionalParser#condicionDonde.
     def visitCondicionDonde(self, ctx:LenguajeNoRelacionalParser.CondicionDondeContext):
         return self.visitChildren(ctx)
