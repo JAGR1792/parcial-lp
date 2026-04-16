@@ -2,4 +2,9 @@ __pycache__/
 *.pyc
 .venv/
 .pytest_cache/
-punto_1/generado/__pycache__/
+punto_1_&&_2/generado/__pycache__/
+*.png
+punto_3/ASRD-2/
+
+
+.jpeg

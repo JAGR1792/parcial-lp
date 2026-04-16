@@ -1,4 +1,4 @@
-# Punto 1 - CRUD con ANTLR en Python
+# Punto 1 y 2 - CRUD con ANTLR en Python
 
 Este punto implementa un CRUD minimo con ANTLR4 en Python sobre una base en memoria.
 
@@ -25,7 +25,7 @@ ELIMINAR DE usuarios DONDE edad < 18;
 2. Ejecutar el programa:
 
 ```bash
-.venv/bin/python punto_1/analizador.py punto_1/ejemplos/ejemplo.txt
+.venv/bin/python punto_1_&&_2/analizador.py punto_1_&&_2/ejemplos/ejemplo.txt
 ```
 
 ## Probar
