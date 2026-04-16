@@ -2,4 +2,4 @@ __pycache__/
 *.pyc
 .venv/
 .pytest_cache/
-generated/__pycache__/
+punto_1/generado/__pycache__/

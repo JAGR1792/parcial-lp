@@ -1,8 +1,0 @@
-CREATE COLLECTION users;
-INSERT INTO users { name: "Ana", age: 20, active: true };
-INSERT INTO users { name: "Luis", age: 17, active: false };
-SHOW COLLECTIONS;
-FIND users WHERE age >= 18;
-UPDATE users SET active = false WHERE name == "Ana";
-DELETE FROM users WHERE age < 18;
-FIND users;

@@ -1,4 +1,4 @@
-# Generated from /home/antonio/Downloads/PARCIAL_LP/grammar/NoSql.g4 by ANTLR 4.13.1
+# Generated from /home/antonio/Downloads/PARCIAL_LP/punto_1/gramatica/LenguajeNoRelacional.g4 by ANTLR 4.13.1
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
@@ -73,9 +73,9 @@ def serializedATN():
         125,128,143,151,159,167,176
     ]
 
-class NoSqlParser ( Parser ):
+class LenguajeNoRelacionalParser ( Parser ):
 
-    grammarFileName = "NoSql.g4"
+    grammarFileName = "LenguajeNoRelacional.g4"
 
     atn = ATNDeserializer().deserialize(serializedATN())
 
@@ -83,86 +83,88 @@ class NoSqlParser ( Parser ):
 
     sharedContextCache = PredictionContextCache()
 
-    literalNames = [ "<INVALID>", "'CREATE'", "'COLLECTION'", "'INSERT'", 
-                     "'INTO'", "'FIND'", "'UPDATE'", "'SET'", "'DELETE'", 
-                     "'FROM'", "'SHOW'", "'COLLECTIONS'", "'WHERE'", "'OR'", 
-                     "'AND'", "<INVALID>", "'null'", "'=='", "'!='", "'<='", 
+    literalNames = [ "<INVALID>", "'CREAR'", "'COLECCION'", "'INSERTAR'", 
+                     "'EN'", "'BUSCAR'", "'ACTUALIZAR'", "'FIJAR'", "'ELIMINAR'", 
+                     "'DE'", "'MOSTRAR'", "'COLECCIONES'", "'DONDE'", "'O'", 
+                     "'Y'", "<INVALID>", "'nulo'", "'=='", "'!='", "'<='", 
                      "'>='", "'<'", "'>'", "'='", "':'", "','", "';'", "'('", 
                      "')'", "'{'", "'}'" ]
 
-    symbolicNames = [ "<INVALID>", "CREATE", "COLLECTION", "INSERT", "INTO", 
-                      "FIND", "UPDATE", "SET", "DELETE", "FROM", "SHOW", 
-                      "COLLECTIONS", "WHERE", "OR", "AND", "BOOLEAN", "NULL", 
-                      "EQ", "NEQ", "LTE", "GTE", "LT", "GT", "EQUAL", "COLON", 
-                      "COMMA", "SEMI", "LPAREN", "RPAREN", "LBRACE", "RBRACE", 
-                      "IDENTIFIER", "NUMBER", "STRING", "LINE_COMMENT", 
-                      "BLOCK_COMMENT", "WS" ]
+    symbolicNames = [ "<INVALID>", "CREAR", "COLECCION", "INSERTAR", "EN", 
+                      "BUSCAR", "ACTUALIZAR", "FIJAR", "ELIMINAR", "DE", 
+                      "MOSTRAR", "COLECCIONES", "DONDE", "O", "Y", "BOOLEANO", 
+                      "NULO", "IGUAL_IGUAL", "DIFERENTE", "MENOR_IGUAL", 
+                      "MAYOR_IGUAL", "MENOR", "MAYOR", "IGUAL", "DOS_PUNTOS", 
+                      "COMA", "PUNTO_Y_COMA", "PARENTESIS_ABRE", "PARENTESIS_CIERRA", 
+                      "LLAVE_ABRE", "LLAVE_CIERRA", "IDENTIFICADOR", "NUMERO", 
+                      "CADENA", "COMENTARIO_LINEA", "COMENTARIO_BLOQUE", 
+                      "ESPACIO" ]
 
-    RULE_program = 0
-    RULE_statement = 1
-    RULE_createCollectionStatement = 2
-    RULE_insertStatement = 3
-    RULE_findStatement = 4
-    RULE_updateStatement = 5
-    RULE_deleteStatement = 6
-    RULE_showCollectionsStatement = 7
-    RULE_whereClause = 8
-    RULE_assignmentList = 9
-    RULE_assignment = 10
-    RULE_objectLiteral = 11
-    RULE_pair = 12
-    RULE_expression = 13
-    RULE_orExpr = 14
-    RULE_andExpr = 15
-    RULE_equalityExpr = 16
-    RULE_relationalExpr = 17
-    RULE_primary = 18
+    RULE_programa = 0
+    RULE_instruccion = 1
+    RULE_crearColeccion = 2
+    RULE_insertar = 3
+    RULE_buscar = 4
+    RULE_actualizar = 5
+    RULE_eliminar = 6
+    RULE_mostrarColecciones = 7
+    RULE_condicionDonde = 8
+    RULE_listaAsignaciones = 9
+    RULE_asignacion = 10
+    RULE_objeto = 11
+    RULE_par = 12
+    RULE_expresion = 13
+    RULE_expresionO = 14
+    RULE_expresionY = 15
+    RULE_expresionIgualdad = 16
+    RULE_expresionRelacional = 17
+    RULE_primario = 18
     RULE_literal = 19
 
-    ruleNames =  [ "program", "statement", "createCollectionStatement", 
-                   "insertStatement", "findStatement", "updateStatement", 
-                   "deleteStatement", "showCollectionsStatement", "whereClause", 
-                   "assignmentList", "assignment", "objectLiteral", "pair", 
-                   "expression", "orExpr", "andExpr", "equalityExpr", "relationalExpr", 
-                   "primary", "literal" ]
+    ruleNames =  [ "programa", "instruccion", "crearColeccion", "insertar", 
+                   "buscar", "actualizar", "eliminar", "mostrarColecciones", 
+                   "condicionDonde", "listaAsignaciones", "asignacion", 
+                   "objeto", "par", "expresion", "expresionO", "expresionY", 
+                   "expresionIgualdad", "expresionRelacional", "primario", 
+                   "literal" ]
 
     EOF = Token.EOF
-    CREATE=1
-    COLLECTION=2
-    INSERT=3
-    INTO=4
-    FIND=5
-    UPDATE=6
-    SET=7
-    DELETE=8
-    FROM=9
-    SHOW=10
-    COLLECTIONS=11
-    WHERE=12
-    OR=13
-    AND=14
-    BOOLEAN=15
-    NULL=16
-    EQ=17
-    NEQ=18
-    LTE=19
-    GTE=20
-    LT=21
-    GT=22
-    EQUAL=23
-    COLON=24
-    COMMA=25
-    SEMI=26
-    LPAREN=27
-    RPAREN=28
-    LBRACE=29
-    RBRACE=30
-    IDENTIFIER=31
-    NUMBER=32
-    STRING=33
-    LINE_COMMENT=34
-    BLOCK_COMMENT=35
-    WS=36
+    CREAR=1
+    COLECCION=2
+    INSERTAR=3
+    EN=4
+    BUSCAR=5
+    ACTUALIZAR=6
+    FIJAR=7
+    ELIMINAR=8
+    DE=9
+    MOSTRAR=10
+    COLECCIONES=11
+    DONDE=12
+    O=13
+    Y=14
+    BOOLEANO=15
+    NULO=16
+    IGUAL_IGUAL=17
+    DIFERENTE=18
+    MENOR_IGUAL=19
+    MAYOR_IGUAL=20
+    MENOR=21
+    MAYOR=22
+    IGUAL=23
+    DOS_PUNTOS=24
+    COMA=25
+    PUNTO_Y_COMA=26
+    PARENTESIS_ABRE=27
+    PARENTESIS_CIERRA=28
+    LLAVE_ABRE=29
+    LLAVE_CIERRA=30
+    IDENTIFICADOR=31
+    NUMERO=32
+    CADENA=33
+    COMENTARIO_LINEA=34
+    COMENTARIO_BLOQUE=35
+    ESPACIO=36
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -173,7 +175,7 @@ class NoSqlParser ( Parser ):
 
 
 
-    class ProgramContext(ParserRuleContext):
+    class ProgramaContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -181,39 +183,39 @@ class NoSqlParser ( Parser ):
             self.parser = parser
 
         def EOF(self):
-            return self.getToken(NoSqlParser.EOF, 0)
+            return self.getToken(LenguajeNoRelacionalParser.EOF, 0)
 
-        def statement(self, i:int=None):
+        def instruccion(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(NoSqlParser.StatementContext)
+                return self.getTypedRuleContexts(LenguajeNoRelacionalParser.InstruccionContext)
             else:
-                return self.getTypedRuleContext(NoSqlParser.StatementContext,i)
+                return self.getTypedRuleContext(LenguajeNoRelacionalParser.InstruccionContext,i)
 
 
         def getRuleIndex(self):
-            return NoSqlParser.RULE_program
+            return LenguajeNoRelacionalParser.RULE_programa
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterProgram" ):
-                listener.enterProgram(self)
+            if hasattr( listener, "enterPrograma" ):
+                listener.enterPrograma(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitProgram" ):
-                listener.exitProgram(self)
+            if hasattr( listener, "exitPrograma" ):
+                listener.exitPrograma(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitProgram" ):
-                return visitor.visitProgram(self)
+            if hasattr( visitor, "visitPrograma" ):
+                return visitor.visitPrograma(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def program(self):
+    def programa(self):
 
-        localctx = NoSqlParser.ProgramContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 0, self.RULE_program)
+        localctx = LenguajeNoRelacionalParser.ProgramaContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 0, self.RULE_programa)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -222,13 +224,13 @@ class NoSqlParser ( Parser ):
             _la = self._input.LA(1)
             while (((_la) & ~0x3f) == 0 and ((1 << _la) & 1386) != 0):
                 self.state = 40
-                self.statement()
+                self.instruccion()
                 self.state = 45
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
             self.state = 46
-            self.match(NoSqlParser.EOF)
+            self.match(LenguajeNoRelacionalParser.EOF)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -238,64 +240,64 @@ class NoSqlParser ( Parser ):
         return localctx
 
 
-    class StatementContext(ParserRuleContext):
+    class InstruccionContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def createCollectionStatement(self):
-            return self.getTypedRuleContext(NoSqlParser.CreateCollectionStatementContext,0)
+        def crearColeccion(self):
+            return self.getTypedRuleContext(LenguajeNoRelacionalParser.CrearColeccionContext,0)
 
 
-        def SEMI(self):
-            return self.getToken(NoSqlParser.SEMI, 0)
+        def PUNTO_Y_COMA(self):
+            return self.getToken(LenguajeNoRelacionalParser.PUNTO_Y_COMA, 0)
 
-        def insertStatement(self):
-            return self.getTypedRuleContext(NoSqlParser.InsertStatementContext,0)
-
-
-        def findStatement(self):
-            return self.getTypedRuleContext(NoSqlParser.FindStatementContext,0)
+        def insertar(self):
+            return self.getTypedRuleContext(LenguajeNoRelacionalParser.InsertarContext,0)
 
 
-        def updateStatement(self):
-            return self.getTypedRuleContext(NoSqlParser.UpdateStatementContext,0)
+        def buscar(self):
+            return self.getTypedRuleContext(LenguajeNoRelacionalParser.BuscarContext,0)
 
 
-        def deleteStatement(self):
-            return self.getTypedRuleContext(NoSqlParser.DeleteStatementContext,0)
+        def actualizar(self):
+            return self.getTypedRuleContext(LenguajeNoRelacionalParser.ActualizarContext,0)
 
 
-        def showCollectionsStatement(self):
-            return self.getTypedRuleContext(NoSqlParser.ShowCollectionsStatementContext,0)
+        def eliminar(self):
+            return self.getTypedRuleContext(LenguajeNoRelacionalParser.EliminarContext,0)
+
+
+        def mostrarColecciones(self):
+            return self.getTypedRuleContext(LenguajeNoRelacionalParser.MostrarColeccionesContext,0)
 
 
         def getRuleIndex(self):
-            return NoSqlParser.RULE_statement
+            return LenguajeNoRelacionalParser.RULE_instruccion
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterStatement" ):
-                listener.enterStatement(self)
+            if hasattr( listener, "enterInstruccion" ):
+                listener.enterInstruccion(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitStatement" ):
-                listener.exitStatement(self)
+            if hasattr( listener, "exitInstruccion" ):
+                listener.exitInstruccion(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStatement" ):
-                return visitor.visitStatement(self)
+            if hasattr( visitor, "visitInstruccion" ):
+                return visitor.visitInstruccion(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def statement(self):
+    def instruccion(self):
 
-        localctx = NoSqlParser.StatementContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 2, self.RULE_statement)
+        localctx = LenguajeNoRelacionalParser.InstruccionContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 2, self.RULE_instruccion)
         self._la = 0 # Token type
         try:
             self.state = 72
@@ -304,78 +306,78 @@ class NoSqlParser ( Parser ):
             if token in [1]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 48
-                self.createCollectionStatement()
+                self.crearColeccion()
                 self.state = 50
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==26:
                     self.state = 49
-                    self.match(NoSqlParser.SEMI)
+                    self.match(LenguajeNoRelacionalParser.PUNTO_Y_COMA)
 
 
                 pass
             elif token in [3]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 52
-                self.insertStatement()
+                self.insertar()
                 self.state = 54
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==26:
                     self.state = 53
-                    self.match(NoSqlParser.SEMI)
+                    self.match(LenguajeNoRelacionalParser.PUNTO_Y_COMA)
 
 
                 pass
             elif token in [5]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 56
-                self.findStatement()
+                self.buscar()
                 self.state = 58
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==26:
                     self.state = 57
-                    self.match(NoSqlParser.SEMI)
+                    self.match(LenguajeNoRelacionalParser.PUNTO_Y_COMA)
 
 
                 pass
             elif token in [6]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 60
-                self.updateStatement()
+                self.actualizar()
                 self.state = 62
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==26:
                     self.state = 61
-                    self.match(NoSqlParser.SEMI)
+                    self.match(LenguajeNoRelacionalParser.PUNTO_Y_COMA)
 
 
                 pass
             elif token in [8]:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 64
-                self.deleteStatement()
+                self.eliminar()
                 self.state = 66
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==26:
                     self.state = 65
-                    self.match(NoSqlParser.SEMI)
+                    self.match(LenguajeNoRelacionalParser.PUNTO_Y_COMA)
 
 
                 pass
             elif token in [10]:
                 self.enterOuterAlt(localctx, 6)
                 self.state = 68
-                self.showCollectionsStatement()
+                self.mostrarColecciones()
                 self.state = 70
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==26:
                     self.state = 69
-                    self.match(NoSqlParser.SEMI)
+                    self.match(LenguajeNoRelacionalParser.PUNTO_Y_COMA)
 
 
                 pass
@@ -391,54 +393,54 @@ class NoSqlParser ( Parser ):
         return localctx
 
 
-    class CreateCollectionStatementContext(ParserRuleContext):
+    class CrearColeccionContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def CREATE(self):
-            return self.getToken(NoSqlParser.CREATE, 0)
+        def CREAR(self):
+            return self.getToken(LenguajeNoRelacionalParser.CREAR, 0)
 
-        def COLLECTION(self):
-            return self.getToken(NoSqlParser.COLLECTION, 0)
+        def COLECCION(self):
+            return self.getToken(LenguajeNoRelacionalParser.COLECCION, 0)
 
-        def IDENTIFIER(self):
-            return self.getToken(NoSqlParser.IDENTIFIER, 0)
+        def IDENTIFICADOR(self):
+            return self.getToken(LenguajeNoRelacionalParser.IDENTIFICADOR, 0)
 
         def getRuleIndex(self):
-            return NoSqlParser.RULE_createCollectionStatement
+            return LenguajeNoRelacionalParser.RULE_crearColeccion
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCreateCollectionStatement" ):
-                listener.enterCreateCollectionStatement(self)
+            if hasattr( listener, "enterCrearColeccion" ):
+                listener.enterCrearColeccion(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCreateCollectionStatement" ):
-                listener.exitCreateCollectionStatement(self)
+            if hasattr( listener, "exitCrearColeccion" ):
+                listener.exitCrearColeccion(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCreateCollectionStatement" ):
-                return visitor.visitCreateCollectionStatement(self)
+            if hasattr( visitor, "visitCrearColeccion" ):
+                return visitor.visitCrearColeccion(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def createCollectionStatement(self):
+    def crearColeccion(self):
 
-        localctx = NoSqlParser.CreateCollectionStatementContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 4, self.RULE_createCollectionStatement)
+        localctx = LenguajeNoRelacionalParser.CrearColeccionContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 4, self.RULE_crearColeccion)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 74
-            self.match(NoSqlParser.CREATE)
+            self.match(LenguajeNoRelacionalParser.CREAR)
             self.state = 75
-            self.match(NoSqlParser.COLLECTION)
+            self.match(LenguajeNoRelacionalParser.COLECCION)
             self.state = 76
-            self.match(NoSqlParser.IDENTIFIER)
+            self.match(LenguajeNoRelacionalParser.IDENTIFICADOR)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -448,60 +450,60 @@ class NoSqlParser ( Parser ):
         return localctx
 
 
-    class InsertStatementContext(ParserRuleContext):
+    class InsertarContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def INSERT(self):
-            return self.getToken(NoSqlParser.INSERT, 0)
+        def INSERTAR(self):
+            return self.getToken(LenguajeNoRelacionalParser.INSERTAR, 0)
 
-        def INTO(self):
-            return self.getToken(NoSqlParser.INTO, 0)
+        def EN(self):
+            return self.getToken(LenguajeNoRelacionalParser.EN, 0)
 
-        def IDENTIFIER(self):
-            return self.getToken(NoSqlParser.IDENTIFIER, 0)
+        def IDENTIFICADOR(self):
+            return self.getToken(LenguajeNoRelacionalParser.IDENTIFICADOR, 0)
 
-        def objectLiteral(self):
-            return self.getTypedRuleContext(NoSqlParser.ObjectLiteralContext,0)
+        def objeto(self):
+            return self.getTypedRuleContext(LenguajeNoRelacionalParser.ObjetoContext,0)
 
 
         def getRuleIndex(self):
-            return NoSqlParser.RULE_insertStatement
+            return LenguajeNoRelacionalParser.RULE_insertar
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterInsertStatement" ):
-                listener.enterInsertStatement(self)
+            if hasattr( listener, "enterInsertar" ):
+                listener.enterInsertar(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitInsertStatement" ):
-                listener.exitInsertStatement(self)
+            if hasattr( listener, "exitInsertar" ):
+                listener.exitInsertar(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInsertStatement" ):
-                return visitor.visitInsertStatement(self)
+            if hasattr( visitor, "visitInsertar" ):
+                return visitor.visitInsertar(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def insertStatement(self):
+    def insertar(self):
 
-        localctx = NoSqlParser.InsertStatementContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 6, self.RULE_insertStatement)
+        localctx = LenguajeNoRelacionalParser.InsertarContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 6, self.RULE_insertar)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 78
-            self.match(NoSqlParser.INSERT)
+            self.match(LenguajeNoRelacionalParser.INSERTAR)
             self.state = 79
-            self.match(NoSqlParser.INTO)
+            self.match(LenguajeNoRelacionalParser.EN)
             self.state = 80
-            self.match(NoSqlParser.IDENTIFIER)
+            self.match(LenguajeNoRelacionalParser.IDENTIFICADOR)
             self.state = 81
-            self.objectLiteral()
+            self.objeto()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -511,60 +513,60 @@ class NoSqlParser ( Parser ):
         return localctx
 
 
-    class FindStatementContext(ParserRuleContext):
+    class BuscarContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def FIND(self):
-            return self.getToken(NoSqlParser.FIND, 0)
+        def BUSCAR(self):
+            return self.getToken(LenguajeNoRelacionalParser.BUSCAR, 0)
 
-        def IDENTIFIER(self):
-            return self.getToken(NoSqlParser.IDENTIFIER, 0)
+        def IDENTIFICADOR(self):
+            return self.getToken(LenguajeNoRelacionalParser.IDENTIFICADOR, 0)
 
-        def whereClause(self):
-            return self.getTypedRuleContext(NoSqlParser.WhereClauseContext,0)
+        def condicionDonde(self):
+            return self.getTypedRuleContext(LenguajeNoRelacionalParser.CondicionDondeContext,0)
 
 
         def getRuleIndex(self):
-            return NoSqlParser.RULE_findStatement
+            return LenguajeNoRelacionalParser.RULE_buscar
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterFindStatement" ):
-                listener.enterFindStatement(self)
+            if hasattr( listener, "enterBuscar" ):
+                listener.enterBuscar(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitFindStatement" ):
-                listener.exitFindStatement(self)
+            if hasattr( listener, "exitBuscar" ):
+                listener.exitBuscar(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFindStatement" ):
-                return visitor.visitFindStatement(self)
+            if hasattr( visitor, "visitBuscar" ):
+                return visitor.visitBuscar(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def findStatement(self):
+    def buscar(self):
 
-        localctx = NoSqlParser.FindStatementContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 8, self.RULE_findStatement)
+        localctx = LenguajeNoRelacionalParser.BuscarContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 8, self.RULE_buscar)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 83
-            self.match(NoSqlParser.FIND)
+            self.match(LenguajeNoRelacionalParser.BUSCAR)
             self.state = 84
-            self.match(NoSqlParser.IDENTIFIER)
+            self.match(LenguajeNoRelacionalParser.IDENTIFICADOR)
             self.state = 86
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==12:
                 self.state = 85
-                self.whereClause()
+                self.condicionDonde()
 
 
         except RecognitionException as re:
@@ -576,71 +578,71 @@ class NoSqlParser ( Parser ):
         return localctx
 
 
-    class UpdateStatementContext(ParserRuleContext):
+    class ActualizarContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def UPDATE(self):
-            return self.getToken(NoSqlParser.UPDATE, 0)
+        def ACTUALIZAR(self):
+            return self.getToken(LenguajeNoRelacionalParser.ACTUALIZAR, 0)
 
-        def IDENTIFIER(self):
-            return self.getToken(NoSqlParser.IDENTIFIER, 0)
+        def IDENTIFICADOR(self):
+            return self.getToken(LenguajeNoRelacionalParser.IDENTIFICADOR, 0)
 
-        def SET(self):
-            return self.getToken(NoSqlParser.SET, 0)
+        def FIJAR(self):
+            return self.getToken(LenguajeNoRelacionalParser.FIJAR, 0)
 
-        def assignmentList(self):
-            return self.getTypedRuleContext(NoSqlParser.AssignmentListContext,0)
+        def listaAsignaciones(self):
+            return self.getTypedRuleContext(LenguajeNoRelacionalParser.ListaAsignacionesContext,0)
 
 
-        def whereClause(self):
-            return self.getTypedRuleContext(NoSqlParser.WhereClauseContext,0)
+        def condicionDonde(self):
+            return self.getTypedRuleContext(LenguajeNoRelacionalParser.CondicionDondeContext,0)
 
 
         def getRuleIndex(self):
-            return NoSqlParser.RULE_updateStatement
+            return LenguajeNoRelacionalParser.RULE_actualizar
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterUpdateStatement" ):
-                listener.enterUpdateStatement(self)
+            if hasattr( listener, "enterActualizar" ):
+                listener.enterActualizar(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitUpdateStatement" ):
-                listener.exitUpdateStatement(self)
+            if hasattr( listener, "exitActualizar" ):
+                listener.exitActualizar(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitUpdateStatement" ):
-                return visitor.visitUpdateStatement(self)
+            if hasattr( visitor, "visitActualizar" ):
+                return visitor.visitActualizar(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def updateStatement(self):
+    def actualizar(self):
 
-        localctx = NoSqlParser.UpdateStatementContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 10, self.RULE_updateStatement)
+        localctx = LenguajeNoRelacionalParser.ActualizarContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 10, self.RULE_actualizar)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 88
-            self.match(NoSqlParser.UPDATE)
+            self.match(LenguajeNoRelacionalParser.ACTUALIZAR)
             self.state = 89
-            self.match(NoSqlParser.IDENTIFIER)
+            self.match(LenguajeNoRelacionalParser.IDENTIFICADOR)
             self.state = 90
-            self.match(NoSqlParser.SET)
+            self.match(LenguajeNoRelacionalParser.FIJAR)
             self.state = 91
-            self.assignmentList()
+            self.listaAsignaciones()
             self.state = 93
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==12:
                 self.state = 92
-                self.whereClause()
+                self.condicionDonde()
 
 
         except RecognitionException as re:
@@ -652,65 +654,65 @@ class NoSqlParser ( Parser ):
         return localctx
 
 
-    class DeleteStatementContext(ParserRuleContext):
+    class EliminarContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def DELETE(self):
-            return self.getToken(NoSqlParser.DELETE, 0)
+        def ELIMINAR(self):
+            return self.getToken(LenguajeNoRelacionalParser.ELIMINAR, 0)
 
-        def FROM(self):
-            return self.getToken(NoSqlParser.FROM, 0)
+        def DE(self):
+            return self.getToken(LenguajeNoRelacionalParser.DE, 0)
 
-        def IDENTIFIER(self):
-            return self.getToken(NoSqlParser.IDENTIFIER, 0)
+        def IDENTIFICADOR(self):
+            return self.getToken(LenguajeNoRelacionalParser.IDENTIFICADOR, 0)
 
-        def whereClause(self):
-            return self.getTypedRuleContext(NoSqlParser.WhereClauseContext,0)
+        def condicionDonde(self):
+            return self.getTypedRuleContext(LenguajeNoRelacionalParser.CondicionDondeContext,0)
 
 
         def getRuleIndex(self):
-            return NoSqlParser.RULE_deleteStatement
+            return LenguajeNoRelacionalParser.RULE_eliminar
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDeleteStatement" ):
-                listener.enterDeleteStatement(self)
+            if hasattr( listener, "enterEliminar" ):
+                listener.enterEliminar(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDeleteStatement" ):
-                listener.exitDeleteStatement(self)
+            if hasattr( listener, "exitEliminar" ):
+                listener.exitEliminar(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDeleteStatement" ):
-                return visitor.visitDeleteStatement(self)
+            if hasattr( visitor, "visitEliminar" ):
+                return visitor.visitEliminar(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def deleteStatement(self):
+    def eliminar(self):
 
-        localctx = NoSqlParser.DeleteStatementContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 12, self.RULE_deleteStatement)
+        localctx = LenguajeNoRelacionalParser.EliminarContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 12, self.RULE_eliminar)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 95
-            self.match(NoSqlParser.DELETE)
+            self.match(LenguajeNoRelacionalParser.ELIMINAR)
             self.state = 96
-            self.match(NoSqlParser.FROM)
+            self.match(LenguajeNoRelacionalParser.DE)
             self.state = 97
-            self.match(NoSqlParser.IDENTIFIER)
+            self.match(LenguajeNoRelacionalParser.IDENTIFICADOR)
             self.state = 99
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==12:
                 self.state = 98
-                self.whereClause()
+                self.condicionDonde()
 
 
         except RecognitionException as re:
@@ -722,49 +724,49 @@ class NoSqlParser ( Parser ):
         return localctx
 
 
-    class ShowCollectionsStatementContext(ParserRuleContext):
+    class MostrarColeccionesContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def SHOW(self):
-            return self.getToken(NoSqlParser.SHOW, 0)
+        def MOSTRAR(self):
+            return self.getToken(LenguajeNoRelacionalParser.MOSTRAR, 0)
 
-        def COLLECTIONS(self):
-            return self.getToken(NoSqlParser.COLLECTIONS, 0)
+        def COLECCIONES(self):
+            return self.getToken(LenguajeNoRelacionalParser.COLECCIONES, 0)
 
         def getRuleIndex(self):
-            return NoSqlParser.RULE_showCollectionsStatement
+            return LenguajeNoRelacionalParser.RULE_mostrarColecciones
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterShowCollectionsStatement" ):
-                listener.enterShowCollectionsStatement(self)
+            if hasattr( listener, "enterMostrarColecciones" ):
+                listener.enterMostrarColecciones(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitShowCollectionsStatement" ):
-                listener.exitShowCollectionsStatement(self)
+            if hasattr( listener, "exitMostrarColecciones" ):
+                listener.exitMostrarColecciones(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitShowCollectionsStatement" ):
-                return visitor.visitShowCollectionsStatement(self)
+            if hasattr( visitor, "visitMostrarColecciones" ):
+                return visitor.visitMostrarColecciones(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def showCollectionsStatement(self):
+    def mostrarColecciones(self):
 
-        localctx = NoSqlParser.ShowCollectionsStatementContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 14, self.RULE_showCollectionsStatement)
+        localctx = LenguajeNoRelacionalParser.MostrarColeccionesContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 14, self.RULE_mostrarColecciones)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 101
-            self.match(NoSqlParser.SHOW)
+            self.match(LenguajeNoRelacionalParser.MOSTRAR)
             self.state = 102
-            self.match(NoSqlParser.COLLECTIONS)
+            self.match(LenguajeNoRelacionalParser.COLECCIONES)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -774,50 +776,50 @@ class NoSqlParser ( Parser ):
         return localctx
 
 
-    class WhereClauseContext(ParserRuleContext):
+    class CondicionDondeContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def WHERE(self):
-            return self.getToken(NoSqlParser.WHERE, 0)
+        def DONDE(self):
+            return self.getToken(LenguajeNoRelacionalParser.DONDE, 0)
 
-        def expression(self):
-            return self.getTypedRuleContext(NoSqlParser.ExpressionContext,0)
+        def expresion(self):
+            return self.getTypedRuleContext(LenguajeNoRelacionalParser.ExpresionContext,0)
 
 
         def getRuleIndex(self):
-            return NoSqlParser.RULE_whereClause
+            return LenguajeNoRelacionalParser.RULE_condicionDonde
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterWhereClause" ):
-                listener.enterWhereClause(self)
+            if hasattr( listener, "enterCondicionDonde" ):
+                listener.enterCondicionDonde(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitWhereClause" ):
-                listener.exitWhereClause(self)
+            if hasattr( listener, "exitCondicionDonde" ):
+                listener.exitCondicionDonde(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitWhereClause" ):
-                return visitor.visitWhereClause(self)
+            if hasattr( visitor, "visitCondicionDonde" ):
+                return visitor.visitCondicionDonde(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def whereClause(self):
+    def condicionDonde(self):
 
-        localctx = NoSqlParser.WhereClauseContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 16, self.RULE_whereClause)
+        localctx = LenguajeNoRelacionalParser.CondicionDondeContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 16, self.RULE_condicionDonde)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 104
-            self.match(NoSqlParser.WHERE)
+            self.match(LenguajeNoRelacionalParser.DONDE)
             self.state = 105
-            self.expression()
+            self.expresion()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -827,63 +829,63 @@ class NoSqlParser ( Parser ):
         return localctx
 
 
-    class AssignmentListContext(ParserRuleContext):
+    class ListaAsignacionesContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def assignment(self, i:int=None):
+        def asignacion(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(NoSqlParser.AssignmentContext)
+                return self.getTypedRuleContexts(LenguajeNoRelacionalParser.AsignacionContext)
             else:
-                return self.getTypedRuleContext(NoSqlParser.AssignmentContext,i)
+                return self.getTypedRuleContext(LenguajeNoRelacionalParser.AsignacionContext,i)
 
 
-        def COMMA(self, i:int=None):
+        def COMA(self, i:int=None):
             if i is None:
-                return self.getTokens(NoSqlParser.COMMA)
+                return self.getTokens(LenguajeNoRelacionalParser.COMA)
             else:
-                return self.getToken(NoSqlParser.COMMA, i)
+                return self.getToken(LenguajeNoRelacionalParser.COMA, i)
 
         def getRuleIndex(self):
-            return NoSqlParser.RULE_assignmentList
+            return LenguajeNoRelacionalParser.RULE_listaAsignaciones
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAssignmentList" ):
-                listener.enterAssignmentList(self)
+            if hasattr( listener, "enterListaAsignaciones" ):
+                listener.enterListaAsignaciones(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAssignmentList" ):
-                listener.exitAssignmentList(self)
+            if hasattr( listener, "exitListaAsignaciones" ):
+                listener.exitListaAsignaciones(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAssignmentList" ):
-                return visitor.visitAssignmentList(self)
+            if hasattr( visitor, "visitListaAsignaciones" ):
+                return visitor.visitListaAsignaciones(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def assignmentList(self):
+    def listaAsignaciones(self):
 
-        localctx = NoSqlParser.AssignmentListContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 18, self.RULE_assignmentList)
+        localctx = LenguajeNoRelacionalParser.ListaAsignacionesContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 18, self.RULE_listaAsignaciones)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 107
-            self.assignment()
+            self.asignacion()
             self.state = 112
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==25:
                 self.state = 108
-                self.match(NoSqlParser.COMMA)
+                self.match(LenguajeNoRelacionalParser.COMA)
                 self.state = 109
-                self.assignment()
+                self.asignacion()
                 self.state = 114
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -897,55 +899,55 @@ class NoSqlParser ( Parser ):
         return localctx
 
 
-    class AssignmentContext(ParserRuleContext):
+    class AsignacionContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def IDENTIFIER(self):
-            return self.getToken(NoSqlParser.IDENTIFIER, 0)
+        def IDENTIFICADOR(self):
+            return self.getToken(LenguajeNoRelacionalParser.IDENTIFICADOR, 0)
 
-        def EQUAL(self):
-            return self.getToken(NoSqlParser.EQUAL, 0)
+        def IGUAL(self):
+            return self.getToken(LenguajeNoRelacionalParser.IGUAL, 0)
 
-        def expression(self):
-            return self.getTypedRuleContext(NoSqlParser.ExpressionContext,0)
+        def expresion(self):
+            return self.getTypedRuleContext(LenguajeNoRelacionalParser.ExpresionContext,0)
 
 
         def getRuleIndex(self):
-            return NoSqlParser.RULE_assignment
+            return LenguajeNoRelacionalParser.RULE_asignacion
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAssignment" ):
-                listener.enterAssignment(self)
+            if hasattr( listener, "enterAsignacion" ):
+                listener.enterAsignacion(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAssignment" ):
-                listener.exitAssignment(self)
+            if hasattr( listener, "exitAsignacion" ):
+                listener.exitAsignacion(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAssignment" ):
-                return visitor.visitAssignment(self)
+            if hasattr( visitor, "visitAsignacion" ):
+                return visitor.visitAsignacion(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def assignment(self):
+    def asignacion(self):
 
-        localctx = NoSqlParser.AssignmentContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 20, self.RULE_assignment)
+        localctx = LenguajeNoRelacionalParser.AsignacionContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 20, self.RULE_asignacion)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 115
-            self.match(NoSqlParser.IDENTIFIER)
+            self.match(LenguajeNoRelacionalParser.IDENTIFICADOR)
             self.state = 116
-            self.match(NoSqlParser.EQUAL)
+            self.match(LenguajeNoRelacionalParser.IGUAL)
             self.state = 117
-            self.expression()
+            self.expresion()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -955,75 +957,75 @@ class NoSqlParser ( Parser ):
         return localctx
 
 
-    class ObjectLiteralContext(ParserRuleContext):
+    class ObjetoContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def LBRACE(self):
-            return self.getToken(NoSqlParser.LBRACE, 0)
+        def LLAVE_ABRE(self):
+            return self.getToken(LenguajeNoRelacionalParser.LLAVE_ABRE, 0)
 
-        def RBRACE(self):
-            return self.getToken(NoSqlParser.RBRACE, 0)
+        def LLAVE_CIERRA(self):
+            return self.getToken(LenguajeNoRelacionalParser.LLAVE_CIERRA, 0)
 
-        def pair(self, i:int=None):
+        def par(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(NoSqlParser.PairContext)
+                return self.getTypedRuleContexts(LenguajeNoRelacionalParser.ParContext)
             else:
-                return self.getTypedRuleContext(NoSqlParser.PairContext,i)
+                return self.getTypedRuleContext(LenguajeNoRelacionalParser.ParContext,i)
 
 
-        def COMMA(self, i:int=None):
+        def COMA(self, i:int=None):
             if i is None:
-                return self.getTokens(NoSqlParser.COMMA)
+                return self.getTokens(LenguajeNoRelacionalParser.COMA)
             else:
-                return self.getToken(NoSqlParser.COMMA, i)
+                return self.getToken(LenguajeNoRelacionalParser.COMA, i)
 
         def getRuleIndex(self):
-            return NoSqlParser.RULE_objectLiteral
+            return LenguajeNoRelacionalParser.RULE_objeto
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterObjectLiteral" ):
-                listener.enterObjectLiteral(self)
+            if hasattr( listener, "enterObjeto" ):
+                listener.enterObjeto(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitObjectLiteral" ):
-                listener.exitObjectLiteral(self)
+            if hasattr( listener, "exitObjeto" ):
+                listener.exitObjeto(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitObjectLiteral" ):
-                return visitor.visitObjectLiteral(self)
+            if hasattr( visitor, "visitObjeto" ):
+                return visitor.visitObjeto(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def objectLiteral(self):
+    def objeto(self):
 
-        localctx = NoSqlParser.ObjectLiteralContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 22, self.RULE_objectLiteral)
+        localctx = LenguajeNoRelacionalParser.ObjetoContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 22, self.RULE_objeto)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 119
-            self.match(NoSqlParser.LBRACE)
+            self.match(LenguajeNoRelacionalParser.LLAVE_ABRE)
             self.state = 128
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==31:
                 self.state = 120
-                self.pair()
+                self.par()
                 self.state = 125
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while _la==25:
                     self.state = 121
-                    self.match(NoSqlParser.COMMA)
+                    self.match(LenguajeNoRelacionalParser.COMA)
                     self.state = 122
-                    self.pair()
+                    self.par()
                     self.state = 127
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
@@ -1031,7 +1033,7 @@ class NoSqlParser ( Parser ):
 
 
             self.state = 130
-            self.match(NoSqlParser.RBRACE)
+            self.match(LenguajeNoRelacionalParser.LLAVE_CIERRA)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1041,55 +1043,55 @@ class NoSqlParser ( Parser ):
         return localctx
 
 
-    class PairContext(ParserRuleContext):
+    class ParContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def IDENTIFIER(self):
-            return self.getToken(NoSqlParser.IDENTIFIER, 0)
+        def IDENTIFICADOR(self):
+            return self.getToken(LenguajeNoRelacionalParser.IDENTIFICADOR, 0)
 
-        def COLON(self):
-            return self.getToken(NoSqlParser.COLON, 0)
+        def DOS_PUNTOS(self):
+            return self.getToken(LenguajeNoRelacionalParser.DOS_PUNTOS, 0)
 
-        def expression(self):
-            return self.getTypedRuleContext(NoSqlParser.ExpressionContext,0)
+        def expresion(self):
+            return self.getTypedRuleContext(LenguajeNoRelacionalParser.ExpresionContext,0)
 
 
         def getRuleIndex(self):
-            return NoSqlParser.RULE_pair
+            return LenguajeNoRelacionalParser.RULE_par
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterPair" ):
-                listener.enterPair(self)
+            if hasattr( listener, "enterPar" ):
+                listener.enterPar(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitPair" ):
-                listener.exitPair(self)
+            if hasattr( listener, "exitPar" ):
+                listener.exitPar(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPair" ):
-                return visitor.visitPair(self)
+            if hasattr( visitor, "visitPar" ):
+                return visitor.visitPar(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def pair(self):
+    def par(self):
 
-        localctx = NoSqlParser.PairContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 24, self.RULE_pair)
+        localctx = LenguajeNoRelacionalParser.ParContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 24, self.RULE_par)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 132
-            self.match(NoSqlParser.IDENTIFIER)
+            self.match(LenguajeNoRelacionalParser.IDENTIFICADOR)
             self.state = 133
-            self.match(NoSqlParser.COLON)
+            self.match(LenguajeNoRelacionalParser.DOS_PUNTOS)
             self.state = 134
-            self.expression()
+            self.expresion()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1099,45 +1101,45 @@ class NoSqlParser ( Parser ):
         return localctx
 
 
-    class ExpressionContext(ParserRuleContext):
+    class ExpresionContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def orExpr(self):
-            return self.getTypedRuleContext(NoSqlParser.OrExprContext,0)
+        def expresionO(self):
+            return self.getTypedRuleContext(LenguajeNoRelacionalParser.ExpresionOContext,0)
 
 
         def getRuleIndex(self):
-            return NoSqlParser.RULE_expression
+            return LenguajeNoRelacionalParser.RULE_expresion
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterExpression" ):
-                listener.enterExpression(self)
+            if hasattr( listener, "enterExpresion" ):
+                listener.enterExpresion(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitExpression" ):
-                listener.exitExpression(self)
+            if hasattr( listener, "exitExpresion" ):
+                listener.exitExpresion(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExpression" ):
-                return visitor.visitExpression(self)
+            if hasattr( visitor, "visitExpresion" ):
+                return visitor.visitExpresion(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def expression(self):
+    def expresion(self):
 
-        localctx = NoSqlParser.ExpressionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 26, self.RULE_expression)
+        localctx = LenguajeNoRelacionalParser.ExpresionContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 26, self.RULE_expresion)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 136
-            self.orExpr()
+            self.expresionO()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1147,63 +1149,63 @@ class NoSqlParser ( Parser ):
         return localctx
 
 
-    class OrExprContext(ParserRuleContext):
+    class ExpresionOContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def andExpr(self, i:int=None):
+        def expresionY(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(NoSqlParser.AndExprContext)
+                return self.getTypedRuleContexts(LenguajeNoRelacionalParser.ExpresionYContext)
             else:
-                return self.getTypedRuleContext(NoSqlParser.AndExprContext,i)
+                return self.getTypedRuleContext(LenguajeNoRelacionalParser.ExpresionYContext,i)
 
 
-        def OR(self, i:int=None):
+        def O(self, i:int=None):
             if i is None:
-                return self.getTokens(NoSqlParser.OR)
+                return self.getTokens(LenguajeNoRelacionalParser.O)
             else:
-                return self.getToken(NoSqlParser.OR, i)
+                return self.getToken(LenguajeNoRelacionalParser.O, i)
 
         def getRuleIndex(self):
-            return NoSqlParser.RULE_orExpr
+            return LenguajeNoRelacionalParser.RULE_expresionO
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOrExpr" ):
-                listener.enterOrExpr(self)
+            if hasattr( listener, "enterExpresionO" ):
+                listener.enterExpresionO(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOrExpr" ):
-                listener.exitOrExpr(self)
+            if hasattr( listener, "exitExpresionO" ):
+                listener.exitExpresionO(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOrExpr" ):
-                return visitor.visitOrExpr(self)
+            if hasattr( visitor, "visitExpresionO" ):
+                return visitor.visitExpresionO(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def orExpr(self):
+    def expresionO(self):
 
-        localctx = NoSqlParser.OrExprContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 28, self.RULE_orExpr)
+        localctx = LenguajeNoRelacionalParser.ExpresionOContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 28, self.RULE_expresionO)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 138
-            self.andExpr()
+            self.expresionY()
             self.state = 143
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==13:
                 self.state = 139
-                self.match(NoSqlParser.OR)
+                self.match(LenguajeNoRelacionalParser.O)
                 self.state = 140
-                self.andExpr()
+                self.expresionY()
                 self.state = 145
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -1217,63 +1219,63 @@ class NoSqlParser ( Parser ):
         return localctx
 
 
-    class AndExprContext(ParserRuleContext):
+    class ExpresionYContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def equalityExpr(self, i:int=None):
+        def expresionIgualdad(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(NoSqlParser.EqualityExprContext)
+                return self.getTypedRuleContexts(LenguajeNoRelacionalParser.ExpresionIgualdadContext)
             else:
-                return self.getTypedRuleContext(NoSqlParser.EqualityExprContext,i)
+                return self.getTypedRuleContext(LenguajeNoRelacionalParser.ExpresionIgualdadContext,i)
 
 
-        def AND(self, i:int=None):
+        def Y(self, i:int=None):
             if i is None:
-                return self.getTokens(NoSqlParser.AND)
+                return self.getTokens(LenguajeNoRelacionalParser.Y)
             else:
-                return self.getToken(NoSqlParser.AND, i)
+                return self.getToken(LenguajeNoRelacionalParser.Y, i)
 
         def getRuleIndex(self):
-            return NoSqlParser.RULE_andExpr
+            return LenguajeNoRelacionalParser.RULE_expresionY
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAndExpr" ):
-                listener.enterAndExpr(self)
+            if hasattr( listener, "enterExpresionY" ):
+                listener.enterExpresionY(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAndExpr" ):
-                listener.exitAndExpr(self)
+            if hasattr( listener, "exitExpresionY" ):
+                listener.exitExpresionY(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAndExpr" ):
-                return visitor.visitAndExpr(self)
+            if hasattr( visitor, "visitExpresionY" ):
+                return visitor.visitExpresionY(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def andExpr(self):
+    def expresionY(self):
 
-        localctx = NoSqlParser.AndExprContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 30, self.RULE_andExpr)
+        localctx = LenguajeNoRelacionalParser.ExpresionYContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 30, self.RULE_expresionY)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 146
-            self.equalityExpr()
+            self.expresionIgualdad()
             self.state = 151
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==14:
                 self.state = 147
-                self.match(NoSqlParser.AND)
+                self.match(LenguajeNoRelacionalParser.Y)
                 self.state = 148
-                self.equalityExpr()
+                self.expresionIgualdad()
                 self.state = 153
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -1287,61 +1289,61 @@ class NoSqlParser ( Parser ):
         return localctx
 
 
-    class EqualityExprContext(ParserRuleContext):
+    class ExpresionIgualdadContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def relationalExpr(self, i:int=None):
+        def expresionRelacional(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(NoSqlParser.RelationalExprContext)
+                return self.getTypedRuleContexts(LenguajeNoRelacionalParser.ExpresionRelacionalContext)
             else:
-                return self.getTypedRuleContext(NoSqlParser.RelationalExprContext,i)
+                return self.getTypedRuleContext(LenguajeNoRelacionalParser.ExpresionRelacionalContext,i)
 
 
-        def EQ(self, i:int=None):
+        def IGUAL_IGUAL(self, i:int=None):
             if i is None:
-                return self.getTokens(NoSqlParser.EQ)
+                return self.getTokens(LenguajeNoRelacionalParser.IGUAL_IGUAL)
             else:
-                return self.getToken(NoSqlParser.EQ, i)
+                return self.getToken(LenguajeNoRelacionalParser.IGUAL_IGUAL, i)
 
-        def NEQ(self, i:int=None):
+        def DIFERENTE(self, i:int=None):
             if i is None:
-                return self.getTokens(NoSqlParser.NEQ)
+                return self.getTokens(LenguajeNoRelacionalParser.DIFERENTE)
             else:
-                return self.getToken(NoSqlParser.NEQ, i)
+                return self.getToken(LenguajeNoRelacionalParser.DIFERENTE, i)
 
         def getRuleIndex(self):
-            return NoSqlParser.RULE_equalityExpr
+            return LenguajeNoRelacionalParser.RULE_expresionIgualdad
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterEqualityExpr" ):
-                listener.enterEqualityExpr(self)
+            if hasattr( listener, "enterExpresionIgualdad" ):
+                listener.enterExpresionIgualdad(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitEqualityExpr" ):
-                listener.exitEqualityExpr(self)
+            if hasattr( listener, "exitExpresionIgualdad" ):
+                listener.exitExpresionIgualdad(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitEqualityExpr" ):
-                return visitor.visitEqualityExpr(self)
+            if hasattr( visitor, "visitExpresionIgualdad" ):
+                return visitor.visitExpresionIgualdad(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def equalityExpr(self):
+    def expresionIgualdad(self):
 
-        localctx = NoSqlParser.EqualityExprContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 32, self.RULE_equalityExpr)
+        localctx = LenguajeNoRelacionalParser.ExpresionIgualdadContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 32, self.RULE_expresionIgualdad)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 154
-            self.relationalExpr()
+            self.expresionRelacional()
             self.state = 159
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -1354,7 +1356,7 @@ class NoSqlParser ( Parser ):
                     self._errHandler.reportMatch(self)
                     self.consume()
                 self.state = 156
-                self.relationalExpr()
+                self.expresionRelacional()
                 self.state = 161
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -1368,73 +1370,73 @@ class NoSqlParser ( Parser ):
         return localctx
 
 
-    class RelationalExprContext(ParserRuleContext):
+    class ExpresionRelacionalContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def primary(self, i:int=None):
+        def primario(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(NoSqlParser.PrimaryContext)
+                return self.getTypedRuleContexts(LenguajeNoRelacionalParser.PrimarioContext)
             else:
-                return self.getTypedRuleContext(NoSqlParser.PrimaryContext,i)
+                return self.getTypedRuleContext(LenguajeNoRelacionalParser.PrimarioContext,i)
 
 
-        def LT(self, i:int=None):
+        def MENOR(self, i:int=None):
             if i is None:
-                return self.getTokens(NoSqlParser.LT)
+                return self.getTokens(LenguajeNoRelacionalParser.MENOR)
             else:
-                return self.getToken(NoSqlParser.LT, i)
+                return self.getToken(LenguajeNoRelacionalParser.MENOR, i)
 
-        def LTE(self, i:int=None):
+        def MENOR_IGUAL(self, i:int=None):
             if i is None:
-                return self.getTokens(NoSqlParser.LTE)
+                return self.getTokens(LenguajeNoRelacionalParser.MENOR_IGUAL)
             else:
-                return self.getToken(NoSqlParser.LTE, i)
+                return self.getToken(LenguajeNoRelacionalParser.MENOR_IGUAL, i)
 
-        def GT(self, i:int=None):
+        def MAYOR(self, i:int=None):
             if i is None:
-                return self.getTokens(NoSqlParser.GT)
+                return self.getTokens(LenguajeNoRelacionalParser.MAYOR)
             else:
-                return self.getToken(NoSqlParser.GT, i)
+                return self.getToken(LenguajeNoRelacionalParser.MAYOR, i)
 
-        def GTE(self, i:int=None):
+        def MAYOR_IGUAL(self, i:int=None):
             if i is None:
-                return self.getTokens(NoSqlParser.GTE)
+                return self.getTokens(LenguajeNoRelacionalParser.MAYOR_IGUAL)
             else:
-                return self.getToken(NoSqlParser.GTE, i)
+                return self.getToken(LenguajeNoRelacionalParser.MAYOR_IGUAL, i)
 
         def getRuleIndex(self):
-            return NoSqlParser.RULE_relationalExpr
+            return LenguajeNoRelacionalParser.RULE_expresionRelacional
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterRelationalExpr" ):
-                listener.enterRelationalExpr(self)
+            if hasattr( listener, "enterExpresionRelacional" ):
+                listener.enterExpresionRelacional(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitRelationalExpr" ):
-                listener.exitRelationalExpr(self)
+            if hasattr( listener, "exitExpresionRelacional" ):
+                listener.exitExpresionRelacional(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRelationalExpr" ):
-                return visitor.visitRelationalExpr(self)
+            if hasattr( visitor, "visitExpresionRelacional" ):
+                return visitor.visitExpresionRelacional(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def relationalExpr(self):
+    def expresionRelacional(self):
 
-        localctx = NoSqlParser.RelationalExprContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 34, self.RULE_relationalExpr)
+        localctx = LenguajeNoRelacionalParser.ExpresionRelacionalContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 34, self.RULE_expresionRelacional)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 162
-            self.primary()
+            self.primario()
             self.state = 167
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -1447,7 +1449,7 @@ class NoSqlParser ( Parser ):
                     self._errHandler.reportMatch(self)
                     self.consume()
                 self.state = 164
-                self.primary()
+                self.primario()
                 self.state = 169
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -1461,7 +1463,7 @@ class NoSqlParser ( Parser ):
         return localctx
 
 
-    class PrimaryContext(ParserRuleContext):
+    class PrimarioContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -1469,46 +1471,46 @@ class NoSqlParser ( Parser ):
             self.parser = parser
 
         def literal(self):
-            return self.getTypedRuleContext(NoSqlParser.LiteralContext,0)
+            return self.getTypedRuleContext(LenguajeNoRelacionalParser.LiteralContext,0)
 
 
-        def IDENTIFIER(self):
-            return self.getToken(NoSqlParser.IDENTIFIER, 0)
+        def IDENTIFICADOR(self):
+            return self.getToken(LenguajeNoRelacionalParser.IDENTIFICADOR, 0)
 
-        def LPAREN(self):
-            return self.getToken(NoSqlParser.LPAREN, 0)
+        def PARENTESIS_ABRE(self):
+            return self.getToken(LenguajeNoRelacionalParser.PARENTESIS_ABRE, 0)
 
-        def expression(self):
-            return self.getTypedRuleContext(NoSqlParser.ExpressionContext,0)
+        def expresion(self):
+            return self.getTypedRuleContext(LenguajeNoRelacionalParser.ExpresionContext,0)
 
 
-        def RPAREN(self):
-            return self.getToken(NoSqlParser.RPAREN, 0)
+        def PARENTESIS_CIERRA(self):
+            return self.getToken(LenguajeNoRelacionalParser.PARENTESIS_CIERRA, 0)
 
         def getRuleIndex(self):
-            return NoSqlParser.RULE_primary
+            return LenguajeNoRelacionalParser.RULE_primario
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterPrimary" ):
-                listener.enterPrimary(self)
+            if hasattr( listener, "enterPrimario" ):
+                listener.enterPrimario(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitPrimary" ):
-                listener.exitPrimary(self)
+            if hasattr( listener, "exitPrimario" ):
+                listener.exitPrimario(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPrimary" ):
-                return visitor.visitPrimary(self)
+            if hasattr( visitor, "visitPrimario" ):
+                return visitor.visitPrimario(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def primary(self):
+    def primario(self):
 
-        localctx = NoSqlParser.PrimaryContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 36, self.RULE_primary)
+        localctx = LenguajeNoRelacionalParser.PrimarioContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 36, self.RULE_primario)
         try:
             self.state = 176
             self._errHandler.sync(self)
@@ -1521,16 +1523,16 @@ class NoSqlParser ( Parser ):
             elif token in [31]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 171
-                self.match(NoSqlParser.IDENTIFIER)
+                self.match(LenguajeNoRelacionalParser.IDENTIFICADOR)
                 pass
             elif token in [27]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 172
-                self.match(NoSqlParser.LPAREN)
+                self.match(LenguajeNoRelacionalParser.PARENTESIS_ABRE)
                 self.state = 173
-                self.expression()
+                self.expresion()
                 self.state = 174
-                self.match(NoSqlParser.RPAREN)
+                self.match(LenguajeNoRelacionalParser.PARENTESIS_CIERRA)
                 pass
             else:
                 raise NoViableAltException(self)
@@ -1551,20 +1553,20 @@ class NoSqlParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def STRING(self):
-            return self.getToken(NoSqlParser.STRING, 0)
+        def CADENA(self):
+            return self.getToken(LenguajeNoRelacionalParser.CADENA, 0)
 
-        def NUMBER(self):
-            return self.getToken(NoSqlParser.NUMBER, 0)
+        def NUMERO(self):
+            return self.getToken(LenguajeNoRelacionalParser.NUMERO, 0)
 
-        def BOOLEAN(self):
-            return self.getToken(NoSqlParser.BOOLEAN, 0)
+        def BOOLEANO(self):
+            return self.getToken(LenguajeNoRelacionalParser.BOOLEANO, 0)
 
-        def NULL(self):
-            return self.getToken(NoSqlParser.NULL, 0)
+        def NULO(self):
+            return self.getToken(LenguajeNoRelacionalParser.NULO, 0)
 
         def getRuleIndex(self):
-            return NoSqlParser.RULE_literal
+            return LenguajeNoRelacionalParser.RULE_literal
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterLiteral" ):
@@ -1585,7 +1587,7 @@ class NoSqlParser ( Parser ):
 
     def literal(self):
 
-        localctx = NoSqlParser.LiteralContext(self, self._ctx, self.state)
+        localctx = LenguajeNoRelacionalParser.LiteralContext(self, self._ctx, self.state)
         self.enterRule(localctx, 38, self.RULE_literal)
         self._la = 0 # Token type
         try:
