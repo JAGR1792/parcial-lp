@@ -20,21 +20,21 @@ class EvalVisitor(ParseTreeVisitor):
     def visitCreateCollectionStatement(self, ctx):
         collection_name = ctx.IDENTIFIER().getText()
         self.collections.setdefault(collection_name, [])
-        print(f"Collection created: {collection_name}")
+        print(f"Colección creada: {collection_name}")
         return None
 
     def visitInsertStatement(self, ctx):
         collection_name = ctx.IDENTIFIER().getText()
         document = self.visit(ctx.objectLiteral())
         self.collections.setdefault(collection_name, []).append(document)
-        print(f"Inserted into {collection_name}: {document}")
+        print(f"Insertado en {collection_name}: {document}")
         return document
 
     def visitFindStatement(self, ctx):
         collection_name = ctx.IDENTIFIER().getText()
         documents = self.collections.get(collection_name, [])
         matches = [document for document in documents if self._matches_where(ctx.whereClause(), document)]
-        print(f"Find in {collection_name}: {matches}")
+        print(f"Consulta en {collection_name}: {matches}")
         return matches
 
     def visitUpdateStatement(self, ctx):
@@ -48,7 +48,7 @@ class EvalVisitor(ParseTreeVisitor):
                 document.update(updates)
                 updated += 1
 
-        print(f"Update in {collection_name}: {updated} documents")
+        print(f"Actualización en {collection_name}: {updated} documentos")
         return updated
 
     def visitDeleteStatement(self, ctx):
@@ -57,11 +57,11 @@ class EvalVisitor(ParseTreeVisitor):
         before = len(documents)
         documents[:] = [document for document in documents if not self._matches_where(ctx.whereClause(), document)]
         deleted = before - len(documents)
-        print(f"Delete from {collection_name}: {deleted} documents")
+        print(f"Eliminación en {collection_name}: {deleted} documentos")
         return deleted
 
     def visitShowCollectionsStatement(self, ctx):
-        print(f"Collections: {list(self.collections.keys())}")
+        print(f"Colecciones: {list(self.collections.keys())}")
         return list(self.collections.keys())
 
     def visitObjectLiteral(self, ctx):

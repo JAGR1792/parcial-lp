@@ -27,7 +27,7 @@ DELETE FROM users WHERE age < 18;
 2. Ejecutar el programa:
 
 ```bash
-python app.py examples/sample.nosql
+python app.py examples/ejemplo.nosql
 ```
 
 ## Probar

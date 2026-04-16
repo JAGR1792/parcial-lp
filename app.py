@@ -3,7 +3,7 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-from antlr4 import CommonTokenStream, FileStream, InputStream
+from antlr4 import CommonTokenStream, InputStream
 
 ROOT = Path(__file__).resolve().parent
 GENERATED_DIR = ROOT / "generated"
