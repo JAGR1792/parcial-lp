@@ -1,6 +1,6 @@
-# Punto 1 - Lenguaje CRUD con ANTLR en Python
+# Punto 1 - CRUD con ANTLR en Python
 
-Este proyecto implementa el punto 1 con ANTLR4, visitante y un evaluador en Python sobre una base en memoria.
+Este punto implementa un CRUD minimo con ANTLR4 en Python sobre una base en memoria.
 
 ## Operaciones soportadas
 
@@ -9,8 +9,6 @@ Este proyecto implementa el punto 1 con ANTLR4, visitante y un evaluador en Pyth
 - `BUSCAR nombre DONDE condicion;`
 - `ACTUALIZAR nombre FIJAR campo = valor DONDE condicion;`
 - `ELIMINAR DE nombre DONDE condicion;`
-- `MOSTRAR COLECCIONES;`
-
 ## Ejemplo
 
 ```text
