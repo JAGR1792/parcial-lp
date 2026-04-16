@@ -1,7 +1,6 @@
 CREAR COLECCION usuarios;
 INSERTAR EN usuarios { nombre: "Ana", edad: 20, activo: verdadero };
 INSERTAR EN usuarios { nombre: "Luis", edad: 17, activo: falso };
-MOSTRAR COLECCIONES;
 BUSCAR usuarios DONDE edad >= 18;
 ACTUALIZAR usuarios FIJAR activo = falso DONDE nombre == "Ana";
 ELIMINAR DE usuarios DONDE edad < 18;
