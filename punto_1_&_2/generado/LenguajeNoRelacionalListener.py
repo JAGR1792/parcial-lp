@@ -1,4 +1,4 @@
-# Generated from /home/antonio/Downloads/PARCIAL_LP/punto_1_&&_2/gramatica/LenguajeNoRelacional.g4 by ANTLR 4.13.1
+# Generated from /home/antonio/Downloads/PARCIAL_LP/punto_1_&_2/gramatica/LenguajeNoRelacional.g4 by ANTLR 4.13.1
 from antlr4 import *
 if "." in __name__:
     from .LenguajeNoRelacionalParser import LenguajeNoRelacionalParser

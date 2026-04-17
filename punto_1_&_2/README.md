@@ -7,7 +7,7 @@ CRUD minimo con ANTLR4 en Python.
 Desde la raiz del repo:
 
 ```bash
-python3 punto_1_&&_2/analizador.py punto_1_&&_2/ejemplos/ejemplo.txt
+python3 "punto_1_&_2/analizador.py" "punto_1_&_2/ejemplos/ejemplo.txt"
 ```
 
 ## Probar
