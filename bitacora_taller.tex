@@ -23,7 +23,7 @@ Implementar un mini lenguaje CRUD con ANTLR en Python y un visitante de evaluaci
 \begin{itemize}
     \item Se definio la gramatica en \texttt{punto\_1\_\&\&\_2/gramatica/LenguajeNoRelacional.g4}.
     \item Se implemento el analizador en \texttt{punto\_1\_\&\&\_2/analizador.py}.
-    \item Se implemento la evaluacion con visitante en \texttt{punto\_1\_\&\&\_2/visitante\_evaluacion.py}.
+    \item Se implemento la evaluacion con visitor en \texttt{punto\_1\_\&\&\_2/visitante\_evaluacion.py}.
     \item Se incluyo ejemplo de ejecucion y prueba automatizada.
 \end{itemize}
 
@@ -104,11 +104,24 @@ PREDICCION:
     \caption{Evidencia de ejecucion del punto 3.}
 \end{figure}
 
-\subsection*{Espacio adicional para otra imagen}
-\begin{figure}[H]
-    \centering
-    \fbox{\rule{0pt}{6cm}\rule{0.9\linewidth}{0pt}}
-    \caption{Imagen adicional del punto 3 (opcional).}
-\end{figure}
+\section{Punto 4}
+\subsection*{Objetivo}
+Comparar metodos de analisis para una gramatica de expresiones, dejando una version estable y verificable.
+
+\subsection*{Lo realizado}
+\begin{itemize}
+    \item Se adapto el algoritmo CYK al escenario de expresiones de calculadora.
+    \item Se implemento el parser predictivo para el mismo conjunto de entradas.
+    \item Se actualizaron los scripts de comparacion y reporte para medir y documentar resultados.
+    \item Se organizaron entradas, resultados y documentacion para facilitar validacion de extremo a extremo.
+\end{itemize}
+
+\section{Como vamos}
+\begin{itemize}
+    \item Punto 1 y 2: completado con gramatica, analizador, visitor y pruebas.
+    \item Punto 3: completado, con resultados de PRIMEROS, SIGUIENTES y PREDICCION ya verificados.
+    \item Punto 4: en consolidacion final de comparacion, reportes y evidencia integrada.
+\end{itemize}
+
 
 \end{document}
