@@ -57,7 +57,7 @@ python3 main.py entradas/entrada.txt
 
 ## Punto 5
 
-Ya tiene una calculadora de escritorio en `punto_5/` con `calc.lex`, `calc.yacc`, `ejemplo.txt`, `Makefile` y un `README.md` con los comandos para compilar, ejecutar y limpiar, tanto con `make` como manualmente. La bitacora para Overleaf esta en `overleaf/bitacora_taller.tex` con sus imagenes en `overleaf/images/`.
+Ya tiene una calculadora de escritorio en `punto_5/` con `calc.lex`, `calc.yacc`, `ejemplo.txt`, `Makefile` y un `README.md` con los comandos para compilar, ejecutar y limpiar, tanto con `make` como manualmente.
 
 ## Bitacora
 
