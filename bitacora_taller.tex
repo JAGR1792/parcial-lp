@@ -8,8 +8,8 @@
 \usepackage{float}
 \geometry{margin=2.5cm}
 
-\title{Bitacora del Taller - Lenguajes de Programacion}
-\author{Antonio}
+\title{Bitacora del PARCIAL - Lenguajes de Programacion}
+\author{Jorge Antonio Garcia Romero}
 \date{\today}
 
 \begin{document}
@@ -27,6 +27,26 @@ Implementar un mini lenguaje CRUD con ANTLR en Python y un visitante de evaluaci
     \item Se incluyo ejemplo de ejecucion y prueba automatizada.
 \end{itemize}
 
+\subsection*{Caracteristicas del lenguaje construido}
+\begin{itemize}
+    \item \textbf{Enfoque:} lenguaje declarativo de sentencias, orientado a operaciones CRUD sobre colecciones no relacionales.
+    \item \textbf{Modelo de datos:} colecciones y documentos tipo objeto (pares clave:valor).
+    \item \textbf{Tipos de literal:} cadena, numero, booleano y nulo.
+    \item \textbf{Expresiones:} soporte de comparaciones (\texttt{==, !=, <, <=, >, >=}) y operadores logicos (\texttt{Y, O}).
+    \item \textbf{Filtrado:} clausula opcional \texttt{DONDE} para \texttt{BUSCAR}, \texttt{ACTUALIZAR} y \texttt{ELIMINAR}.
+    \item \textbf{Comandos base:} \texttt{CREAR COLECCION}, \texttt{INSERTAR EN}, \texttt{BUSCAR}, \texttt{ACTUALIZAR FIJAR}, \texttt{ELIMINAR DE}.
+    \item \textbf{Ejecucion:} semantica implementada con \textit{Visitor} (EvalVisitor) sobre estructuras en memoria de Python.
+\end{itemize}
+
+\subsection*{Ejemplo corto del lenguaje}
+\begin{verbatim}
+CREAR COLECCION usuarios;
+INSERTAR EN usuarios { nombre: "Ana", edad: 20, activo: verdadero };
+BUSCAR usuarios DONDE edad >= 18;
+ACTUALIZAR usuarios FIJAR activo = falso DONDE nombre == "Ana";
+ELIMINAR DE usuarios DONDE edad < 18;
+\end{verbatim}
+
 \subsection*{Evidencia (espacio para imagen)}
 \begin{figure}[H]
     \centering
@@ -40,13 +60,42 @@ Calcular PRIMEROS, SIGUIENTES y PREDICCION para verificar propiedades relacionad
 
 \subsection*{Lo realizado}
 \begin{itemize}
-    \item Se trabajo con los scripts de \texttt{punto\_3} para procesar gramaticas desde archivo.
-    \item Se ejecuto \texttt{python ASD\_Recursivo.py gramatica1.txt} para obtener tablas de salida.
-    \item Se uso como referencia de apoyo el repositorio previo de la materia y la explicacion teorica de LL(1):
-    \begin{itemize}
-        \item \url{https://www.quora.com/How-can-you-prove-or-explain-with-words-that-an-LL-1-grammar-only-needs-one-lookahead-if-you-make-a-recursive-descent-parser-form-it}
-    \end{itemize}
+    \item Se reutilizo y adapto el codigo de una tarea anterior para acelerar la solucion del ejercicio pedido.
+    \item Se uso como base el repositorio previo: \url{https://github.com/JAGR1792/Tareas_LP}.
+    \item Se ejecuto \texttt{python ASD\_Recursivo.py gramatica1.txt} para obtener PRIMEROS, SIGUIENTES y PREDICCION.
+    \item Se complemento la justificacion teorica con esta referencia de LL(1): \url{https://www.quora.com/How-can-you-prove-or-explain-with-words-that-an-LL-1-grammar-only-needs-one-lookahead-if-you-make-a-recursive-descent-parser-form-it}
 \end{itemize}
+
+\subsection*{Fragmento de ejecucion real (gramatica1.txt)}
+\begin{verbatim}
+PRIMEROS:
++-------------+----------+
+| No Terminal | PRIMEROS |
++=============+==========+
+| A           | ε        |
+| B           | ε        |
+| S           | a, b     |
++-------------+----------+
+
+SIGUIENTES:
++-------------+------------+
+| No Terminal | SIGUIENTES |
++=============+============+
+| A           | a, b       |
+| B           | a, b       |
+| S           | $          |
++-------------+------------+
+
+PREDICCION:
++--------------+------------+
+| Regla        | PREDICCION |
++==============+============+
+| S -> A a A b | a          |
+| S -> B b B a | b          |
+| A -> ε       | a, b       |
+| B -> ε       | a, b       |
++--------------+------------+
+\end{verbatim}
 
 \subsection*{Evidencia del punto 3}
 \begin{figure}[H]
