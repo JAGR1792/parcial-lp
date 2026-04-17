@@ -116,11 +116,37 @@ Comparar metodos de analisis para una gramatica de expresiones, dejando una vers
     \item Se organizaron entradas, resultados y documentacion para facilitar validacion de extremo a extremo.
 \end{itemize}
 
+\section{Punto 5}
+\subsection*{Objetivo}
+Implementar y documentar un ejemplo de calculadora de escritorio con \texttt{lex} y \texttt{yacc}, usando la informacion de IBM como referencia.
+
+\subsection*{Lo realizado}
+\begin{itemize}
+    \item Se implemento la calculadora de escritorio en \texttt{punto\_5/calc.lex} y \texttt{punto\_5/calc.yacc}.
+    \item Se incluyeron operaciones aritmeticas, relacionales y booleanas.
+    \item Se habilitaron variables de una sola letra min\'uscula con asignacion.
+    \item Se agrego un archivo de ejemplo \texttt{punto\_5/ejemplo.txt} para probar la calculadora.
+    \item Se dejo documentado el comando de compilacion y ejecucion en \texttt{punto\_5/README.md}.
+\end{itemize}
+
+\subsection*{Resumen tecnico}
+El ejemplo combina dos componentes:
+\begin{itemize}
+    \item \textbf{\texttt{calc.lex}:} convierte la entrada en tokens para palabras reservadas, letras, digitos y simbolos.
+    \item \textbf{\texttt{calc.yacc}:} define la gram\'atica de expresiones, asignaciones, precedencia y tratamiento de errores.
+\end{itemize}
+
+El comportamiento esperado es el de una calculadora interactiva: al escribir una expresion y presionar Enter, el parser la reduce y calcula el resultado. Si se asigna un valor a una variable, esta puede reutilizarse en expresiones posteriores.
+
+\subsection*{Fuente usada}
+Se uso la documentacion de IBM titulada \textit{Programa de ejemplo para los programas lex y yacc}, disponible en: \url{https://www.ibm.com/docs/es/aix/7.3.0?topic=information-example-program-lex-yacc-programs}
+
 \section{Como vamos}
 \begin{itemize}
     \item Punto 1 y 2: completado con gramatica, analizador, visitor y pruebas.
     \item Punto 3: completado, con resultados de PRIMEROS, SIGUIENTES y PREDICCION ya verificados.
     \item Punto 4: completado, con comparacion CYK vs predictivo validada y reporte final actualizado.
+    \item Punto 5: completado, con resumen del ejemplo lex/yacc y fuente IBM agregados a la bitacora.
 \end{itemize}
 
 \section{Guia rapida para rellenar esta bitacora}

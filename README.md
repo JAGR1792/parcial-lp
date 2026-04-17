@@ -57,7 +57,7 @@ python3 main.py entradas/entrada.txt
 
 ## Punto 5
 
-Sin implementacion aun.
+Ya tiene una calculadora de escritorio en `punto_5/` con `calc.lex`, `calc.yacc`, `ejemplo.txt` y un `README.md` con los comandos de compilacion.
 
 ## Bitacora
 

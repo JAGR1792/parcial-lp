@@ -1,0 +1,7 @@
+m=4
+n=10
+m+n
+n>m
+verdadero && falso
+!falso
+(m + n) >= 14
