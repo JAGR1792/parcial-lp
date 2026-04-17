@@ -19,7 +19,7 @@ python3 ASD_Recursivo.py -h
 
 - `ASD_Recursivo.py`: logica principal.
 - `gramatica1.txt`: ejemplo de entrada.
-- `Prueba.jpeg`: evidencia para la bitacora.
+- `Prueba.jpeg`: evidencia para la bitacora, movida a `overleaf/images/Prueba.jpeg` para la version de Overleaf.
 | D           | cinco, cuatro, seis, tres, uno |
 | S           | $                              |
 +-------------+--------------------------------+

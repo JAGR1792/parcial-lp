@@ -8,7 +8,7 @@ Guia general del repo y comandos mas utiles.
 - `punto_3/`: calculo de PRIMEROS, SIGUIENTES y PREDICCION.
 - `punto_4/`: comparacion CYK vs parser predictivo.
 - `punto5/`: vacio por ahora.
-- `bitacora_taller.tex`: bitacora final en LaTeX.
+- `overleaf/bitacora_taller.tex`: bitacora final en LaTeX lista para Overleaf.
 
 ## Instalacion rapida
 
@@ -57,8 +57,8 @@ python3 main.py entradas/entrada.txt
 
 ## Punto 5
 
-Ya tiene una calculadora de escritorio en `punto_5/` con `calc.lex`, `calc.yacc`, `ejemplo.txt` y un `README.md` con los comandos de compilacion.
+Ya tiene una calculadora de escritorio en `punto_5/` con `calc.lex`, `calc.yacc`, `ejemplo.txt`, `Makefile` y un `README.md` con los comandos para compilar, ejecutar y limpiar, tanto con `make` como manualmente. La bitacora para Overleaf esta en `overleaf/bitacora_taller.tex` con sus imagenes en `overleaf/images/`.
 
 ## Bitacora
 
-La guia para completar la bitacora esta en [bitacora_taller.tex](bitacora_taller.tex).
+La guia para completar la bitacora esta en [overleaf/bitacora_taller.tex](overleaf/bitacora_taller.tex).

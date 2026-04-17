@@ -100,7 +100,7 @@ PREDICCION:
 \subsection*{Evidencia del punto 3}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\linewidth]{punto_3/Prueba.jpeg}
+    \includegraphics[width=0.85\linewidth]{images/Prueba.jpeg}
     \caption{Evidencia de ejecucion del punto 3.}
 \end{figure}
 
@@ -126,7 +126,8 @@ Implementar y documentar un ejemplo de calculadora de escritorio con \texttt{lex
     \item Se incluyeron operaciones aritmeticas, relacionales y booleanas.
     \item Se habilitaron variables de una sola letra min\'uscula con asignacion.
     \item Se agrego un archivo de ejemplo \texttt{punto\_5/ejemplo.txt} para probar la calculadora.
-    \item Se dejo documentado el comando de compilacion y ejecucion en \texttt{punto\_5/README.md}.
+    \item Se agrego un \texttt{Makefile} para generar el ejecutable \texttt{calculadora} de forma local.
+    \item Se dejo documentado el comando de compilacion, ejecucion, limpieza y el flujo manual en \texttt{punto\_5/README.md}.
 \end{itemize}
 
 \subsection*{Resumen tecnico}
@@ -136,7 +137,7 @@ El ejemplo combina dos componentes:
     \item \textbf{\texttt{calc.yacc}:} define la gram\'atica de expresiones, asignaciones, precedencia y tratamiento de errores.
 \end{itemize}
 
-El comportamiento esperado es el de una calculadora interactiva: al escribir una expresion y presionar Enter, el parser la reduce y calcula el resultado. Si se asigna un valor a una variable, esta puede reutilizarse en expresiones posteriores.
+El comportamiento esperado es el de una calculadora interactiva: al escribir una expresion y presionar Enter, el parser la reduce y calcula el resultado. Si se asigna un valor a una variable, esta puede reutilizarse en expresiones posteriores. El ejecutable se genera localmente con \texttt{make} y no se versiona en el repositorio; si se prefiere, tambien se puede compilar manualmente con \texttt{yacc}, \texttt{lex} y \texttt{cc}.
 
 \subsection*{Fuente usada}
 Se uso la documentacion de IBM titulada \textit{Programa de ejemplo para los programas lex y yacc}, disponible en: \url{https://www.ibm.com/docs/es/aix/7.3.0?topic=information-example-program-lex-yacc-programs}
@@ -173,7 +174,7 @@ La idea es copiar el prompt sugerido, responderlo con tus palabras y pegar el re
     \item \texttt{punto\_3/README.md}
     \item \texttt{punto\_3/ASD\_Recursivo.py}
     \item \texttt{punto\_3/gramatica1.txt}
-    \item \texttt{punto\_3/Prueba.jpeg}
+    \item \texttt{overleaf/images/Prueba.jpeg}
 \end{itemize}
 
 \subsection*{Punto 4 (prompt de apoyo)}
