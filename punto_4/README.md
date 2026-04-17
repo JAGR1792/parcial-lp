@@ -10,6 +10,9 @@ cd punto_4
 python3 main.py entradas/entrada.txt
 ```
 
+Decir que el análisis más profundo se encuentra en las salidas, en reportes, comparación_seria.md
+es el que tiene las comparaciones
+
 ## Salidas
 
 - `resultados/mediciones_comparacion.csv`
