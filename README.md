@@ -4,7 +4,7 @@ Guia general del repo y comandos mas utiles.
 
 ## Estructura
 
-- `punto_1_&_2/`: CRUD con ANTLR y visitor en Python.
+- `punto_1_2/`: CRUD con ANTLR y visitor en Python.
 - `punto_3/`: calculo de PRIMEROS, SIGUIENTES y PREDICCION.
 - `punto_4/`: comparacion CYK vs parser predictivo.
 - `punto5/`: vacio por ahora.
@@ -23,7 +23,7 @@ pip install -r requirements.txt
 CRUD con ANTLR4. Ejecutar desde la raiz:
 
 ```bash
-python3 "punto_1_&_2/analizador.py" "punto_1_&_2/ejemplos/ejemplo.txt"
+python3 "punto_1_2/analizador.py" "punto_1_2/ejemplos/ejemplo.txt"
 ```
 
 Pruebas:

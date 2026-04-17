@@ -1,4 +1,4 @@
-# Generated from /home/antonio/Downloads/PARCIAL_LP/punto_1_&_2/gramatica/LenguajeNoRelacional.g4 by ANTLR 4.13.1
+# Generated from /home/antonio/Downloads/PARCIAL_LP/punto_1_2/gramatica/LenguajeNoRelacional.g4 by ANTLR 4.13.1
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
