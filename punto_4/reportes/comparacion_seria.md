@@ -24,7 +24,7 @@ DIV    : '/' ;
 LPAREN : '(' ;
 RPAREN : ')' ;
 NUM    : [0-9]+ ('.' [0-9]+)? ;
-WS     : [ 	
+WS     : [ 	
 ]+ -> skip ;
 ```
 
@@ -36,44 +36,44 @@ Total de casos procesados: **38**
 
 | Entrada | Tokens | CYK Estado | Predictivo Estado | Tiempo CYK (s) | Tiempo Predictivo (s) | Ratio CYK/Predictivo |
 |---|---:|---|---|---:|---:|---:|
-| `2+3` | 3 | ACEPTADA | ACEPTADA | 0.00007838 | 0.00001767 | 4.44x |
-| `10-4` | 3 | ACEPTADA | ACEPTADA | 0.00004292 | 0.00001285 | 3.34x |
-| `7*8` | 3 | ACEPTADA | ACEPTADA | 0.00004828 | 0.00000903 | 5.35x |
-| `9/3` | 3 | ACEPTADA | ACEPTADA | 0.00003661 | 0.00000688 | 5.32x |
-| `(2+3)*4` | 7 | ACEPTADA | ACEPTADA | 0.00011198 | 0.00001352 | 8.28x |
-| `8/(2+2)` | 7 | ACEPTADA | ACEPTADA | 0.00010826 | 0.00001696 | 6.38x |
-| `(10-4)*(6+2)` | 11 | ACEPTADA | ACEPTADA | 0.00023128 | 0.00002509 | 9.22x |
-| `18/(3*(2+1))` | 11 | ACEPTADA | ACEPTADA | 0.00021637 | 0.00001792 | 12.07x |
-| `5+6*7-8/2` | 9 | ACEPTADA | ACEPTADA | 0.00018782 | 0.00001876 | 10.01x |
-| `((1+2)*(3+4))/5` | 15 | ACEPTADA | ACEPTADA | 0.00035194 | 0.00002230 | 15.78x |
-| `3+*4` | 4 | RECHAZADA | RECHAZADA | 0.00004427 | 0.00002553 | 1.73x |
-| `(5+2` | 4 | RECHAZADA | RECHAZADA | 0.00004534 | 0.00001165 | 3.89x |
-| `9/)3(` | 5 | RECHAZADA | RECHAZADA | 0.00004570 | 0.00001243 | 3.68x |
-| `1+2+3+4+5+6+7+8+9+10` | 19 | ACEPTADA | ACEPTADA | 0.00069019 | 0.00002496 | 27.65x |
-| `1*2*3*4*5*6*7*8*9*10` | 19 | ACEPTADA | ACEPTADA | 0.00078516 | 0.00002452 | 32.02x |
-| `(1+2+3+4+5)*(6+7+8+9)` | 21 | ACEPTADA | ACEPTADA | 0.00076692 | 0.00003023 | 25.37x |
-| `((1+2)*(3+4)*(5+6))/(7+8)` | 25 | ACEPTADA | ACEPTADA | 0.00093152 | 0.00005394 | 17.27x |
-| `(1+(2*(3+(4*(5+6)))))` | 21 | ACEPTADA | ACEPTADA | 0.00074471 | 0.00006859 | 10.86x |
-| `1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | 29 | ACEPTADA | ACEPTADA | 0.00189479 | 0.00005768 | 32.85x |
-| `(1*2)+(3*4)+(5*6)+(7*8)+(9*10)+(11*12)` | 35 | ACEPTADA | ACEPTADA | 0.00317157 | 0.00005590 | 56.74x |
-| `((1+2+3+4+5)*(6+7+8+9+10))/(11+12)` | 31 | ACEPTADA | ACEPTADA | 0.00171320 | 0.00006400 | 26.77x |
-| `(1+(2+(3+(4+(5+(6+(7+8)))))))` | 29 | ACEPTADA | ACEPTADA | 0.00119653 | 0.00005311 | 22.53x |
-| `((2+3)*(4+5)*(6+7)*(8+9))/(10+11)` | 31 | ACEPTADA | ACEPTADA | 0.00138780 | 0.00004806 | 28.88x |
-| `1+2*3+4*5+6*7+8*9+10*11+12*13+14*15` | 29 | ACEPTADA | ACEPTADA | 0.00178606 | 0.00004321 | 41.33x |
-| `(1+2)*(3+4)*(5+6)*(7+8)*(9+10)` | 29 | ACEPTADA | ACEPTADA | 0.00138455 | 0.00005623 | 24.62x |
-| `((1+2+3+4+5+6+7+8+9+10)*2)/(3+4)` | 31 | ACEPTADA | ACEPTADA | 0.00169235 | 0.00005279 | 32.06x |
-| `(1+(2*(3+(4*(5+(6*(7+8)))))))` | 29 | ACEPTADA | ACEPTADA | 0.00149135 | 0.00010318 | 14.45x |
-| `((1+2)*(3+4)+(5+6)*(7+8)+(9+10)*(11+12))` | 37 | ACEPTADA | ACEPTADA | 0.00270985 | 0.00007904 | 34.28x |
-| `1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+1...` | 39 | ACEPTADA | ACEPTADA | 0.00336034 | 0.00005695 | 59.01x |
-| `(1*2*3*4*5*6)/(7+8+9+10)` | 23 | ACEPTADA | ACEPTADA | 0.00088216 | 0.00003143 | 28.07x |
-| `((1+2+3+4+5+6+7+8)*(9+10+11+12+13+14))/(...` | 39 | ACEPTADA | ACEPTADA | 0.00301663 | 0.00009309 | 32.41x |
-| `(1+(2+(3+(4+(5+(6+(7+(8+(9+10)))))))))` | 37 | ACEPTADA | ACEPTADA | 0.00194958 | 0.00006813 | 28.62x |
-| `((1+2)*(3+4)*(5+6)*(7+8)*(9+10)*(11+12))...` | 43 | ACEPTADA | ACEPTADA | 0.00336249 | 0.00008063 | 41.70x |
-| `1++2` | 4 | RECHAZADA | RECHAZADA | 0.00005649 | 0.00001803 | 3.13x |
-| `((3+4)` | 6 | RECHAZADA | RECHAZADA | 0.00007349 | 0.00001678 | 4.38x |
-| `8/*2` | 4 | RECHAZADA | RECHAZADA | 0.00003740 | 0.00000798 | 4.69x |
-| `(1+2))*3` | 8 | RECHAZADA | RECHAZADA | 0.00010520 | 0.00001428 | 7.37x |
-| `42/(7-7)` | 7 | ACEPTADA | ACEPTADA | 0.00009305 | 0.00001140 | 8.16x |
+| `2+3` | 3 | ACEPTADA | ACEPTADA | 0.00015610 | 0.00003130 | 4.99x |
+| `10-4` | 3 | ACEPTADA | ACEPTADA | 0.00006840 | 0.00001780 | 3.84x |
+| `7*8` | 3 | ACEPTADA | ACEPTADA | 0.00008120 | 0.00001940 | 4.19x |
+| `9/3` | 3 | ACEPTADA | ACEPTADA | 0.00006160 | 0.00001790 | 3.44x |
+| `(2+3)*4` | 7 | ACEPTADA | ACEPTADA | 0.00017470 | 0.00003920 | 4.46x |
+| `8/(2+2)` | 7 | ACEPTADA | ACEPTADA | 0.00013570 | 0.00003180 | 4.27x |
+| `(10-4)*(6+2)` | 11 | ACEPTADA | ACEPTADA | 0.00022460 | 0.00003230 | 6.95x |
+| `18/(3*(2+1))` | 11 | ACEPTADA | ACEPTADA | 0.00021680 | 0.00003180 | 6.82x |
+| `5+6*7-8/2` | 9 | ACEPTADA | ACEPTADA | 0.00024740 | 0.00002410 | 10.27x |
+| `((1+2)*(3+4))/5` | 15 | ACEPTADA | ACEPTADA | 0.00036920 | 0.00003760 | 9.82x |
+| `3+*4` | 4 | RECHAZADA | RECHAZADA | 0.00008880 | 0.00002810 | 3.16x |
+| `(5+2` | 4 | RECHAZADA | RECHAZADA | 0.00006570 | 0.00002020 | 3.25x |
+| `9/)3(` | 5 | RECHAZADA | RECHAZADA | 0.00008390 | 0.00001890 | 4.44x |
+| `1+2+3+4+5+6+7+8+9+10` | 19 | ACEPTADA | ACEPTADA | 0.00104500 | 0.00006950 | 15.04x |
+| `1*2*3*4*5*6*7*8*9*10` | 19 | ACEPTADA | ACEPTADA | 0.00114700 | 0.00005400 | 21.24x |
+| `(1+2+3+4+5)*(6+7+8+9)` | 21 | ACEPTADA | ACEPTADA | 0.00096230 | 0.00006470 | 14.87x |
+| `((1+2)*(3+4)*(5+6))/(7+8)` | 25 | ACEPTADA | ACEPTADA | 0.00086940 | 0.00005070 | 17.15x |
+| `(1+(2*(3+(4*(5+6)))))` | 21 | ACEPTADA | ACEPTADA | 0.00067600 | 0.00005480 | 12.34x |
+| `1+2+3+4+5+6+7+8+9+10+11+12+13+14+15` | 29 | ACEPTADA | ACEPTADA | 0.00158640 | 0.00006300 | 25.18x |
+| `(1*2)+(3*4)+(5*6)+(7*8)+(9*10)+(11*12)` | 35 | ACEPTADA | ACEPTADA | 0.00229360 | 0.00008950 | 25.63x |
+| `((1+2+3+4+5)*(6+7+8+9+10))/(11+12)` | 31 | ACEPTADA | ACEPTADA | 0.00272100 | 0.00009950 | 27.35x |
+| `(1+(2+(3+(4+(5+(6+(7+8)))))))` | 29 | ACEPTADA | ACEPTADA | 0.00138790 | 0.00014280 | 9.72x |
+| `((2+3)*(4+5)*(6+7)*(8+9))/(10+11)` | 31 | ACEPTADA | ACEPTADA | 0.00211550 | 0.00010290 | 20.56x |
+| `1+2*3+4*5+6*7+8*9+10*11+12*13+14*15` | 29 | ACEPTADA | ACEPTADA | 0.00246210 | 0.00008620 | 28.56x |
+| `(1+2)*(3+4)*(5+6)*(7+8)*(9+10)` | 29 | ACEPTADA | ACEPTADA | 0.00176920 | 0.00009690 | 18.26x |
+| `((1+2+3+4+5+6+7+8+9+10)*2)/(3+4)` | 31 | ACEPTADA | ACEPTADA | 0.00239030 | 0.00009740 | 24.54x |
+| `(1+(2*(3+(4*(5+(6*(7+8)))))))` | 29 | ACEPTADA | ACEPTADA | 0.00160180 | 0.00009390 | 17.06x |
+| `((1+2)*(3+4)+(5+6)*(7+8)+(9+10)*(11+12))` | 37 | ACEPTADA | ACEPTADA | 0.00287460 | 0.00010880 | 26.42x |
+| `1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+1...` | 39 | ACEPTADA | ACEPTADA | 0.00795690 | 0.00045000 | 17.68x |
+| `(1*2*3*4*5*6)/(7+8+9+10)` | 23 | ACEPTADA | ACEPTADA | 0.00403880 | 0.00008010 | 50.42x |
+| `((1+2+3+4+5+6+7+8)*(9+10+11+12+13+14))/(...` | 39 | ACEPTADA | ACEPTADA | 0.00485250 | 0.00012370 | 39.23x |
+| `(1+(2+(3+(4+(5+(6+(7+(8+(9+10)))))))))` | 37 | ACEPTADA | ACEPTADA | 0.00265450 | 0.00011150 | 23.81x |
+| `((1+2)*(3+4)*(5+6)*(7+8)*(9+10)*(11+12))...` | 43 | ACEPTADA | ACEPTADA | 0.00444540 | 0.00016300 | 27.27x |
+| `1++2` | 4 | RECHAZADA | RECHAZADA | 0.00008870 | 0.00002600 | 3.41x |
+| `((3+4)` | 6 | RECHAZADA | RECHAZADA | 0.00011580 | 0.00002910 | 3.98x |
+| `8/*2` | 4 | RECHAZADA | RECHAZADA | 0.00007580 | 0.00001640 | 4.62x |
+| `(1+2))*3` | 8 | RECHAZADA | RECHAZADA | 0.00021900 | 0.00003980 | 5.50x |
+| `42/(7-7)` | 7 | ACEPTADA | ACEPTADA | 0.00015170 | 0.00002370 | 6.40x |
 
 
 ---
@@ -89,37 +89,37 @@ Total de casos procesados: **38**
 ### Estadísticas Temporales Promedio
 
 **CYK (Complejidad O(n³)):**
-- Tiempo promedio: **0.00096928 s**
-- Tiempo mediano: **0.00071745 s**
-- Rango: 0.00003661 s - 0.00336249 s
+- Tiempo promedio: **0.00138093 s**
+- Tiempo mediano: **0.00077270 s**
+- Rango: 0.00006160 s - 0.00795690 s
 
 **Predictivo LL(1) (Complejidad O(n)):**
-- Tiempo promedio: **0.00003749 s**
-- Tiempo mediano: **0.00002531 s**
-- Rango: 0.00000688 s - 0.00010318 s
+- Tiempo promedio: **0.00007074 s**
+- Tiempo mediano: **0.00005235 s**
+- Rango: 0.00001640 s - 0.00045000 s
 
 ### Ratio de Rendimiento Relativo
 
-**El parser predictivo es 19.33x mas rapido que CYK en promedio**
+**El parser predictivo es 14.63x mas rapido que CYK en promedio**
 
 Desglose del ratio CYK/Predictivo:
-- Ratio promedio: **19.33x**
-- Ratio mediano: **15.12x**
-- Ratio máximo: **59.01x** (CYK es 59.01 veces más lento)
-- Ratio mínimo: **1.73x** (casi equivalentes en entradas pequeñas)
+- Ratio promedio: **14.63x**
+- Ratio mediano: **11.30x**
+- Ratio máximo: **50.42x** (CYK es 50.42 veces más lento)
+- Ratio mínimo: **3.16x** (casi equivalentes en entradas pequeñas)
 
 ### Interpretación
 
 La curva azul (CYK) crece mas rapido mientras que la curva roja (Predictivo) permanece casi plana. Esto valida:
 
-1. **Entradas pequenas (< 10 tokens):** Ratio ~1.73x - CYK es casi equivalente
-2. **Entradas medianas (10-40 tokens):** Ratio ~19.33x - Diferencia clara
-3. **Entradas grandes (> 40 tokens):** Ratio alcanza **59.01x** - CYK es dramáticamente más lento
+1. **Entradas pequenas (< 10 tokens):** Ratio ~3.16x - CYK es casi equivalente
+2. **Entradas medianas (10-40 tokens):** Ratio ~14.63x - Diferencia clara
+3. **Entradas grandes (> 40 tokens):** Ratio alcanza **50.42x** - CYK es dramáticamente más lento
 
 ### Conclusion Cuantitativa
 
-Para entradas de tamano moderado a grande, **el parser predictivo es 19.3 veces mas eficiente** que CYK, corroborando que:
-$$\text{Eficiencia Predictivo} = \frac{O(n^3)}{O(n)} \approx 19.33 \text{ en promedio}$$
+Para entradas de tamano moderado a grande, **el parser predictivo es 14.6 veces mas eficiente** que CYK, corroborando que:
+$$\text{Eficiencia Predictivo} = \frac{O(n^3)}{O(n)} \approx 14.63 \text{ en promedio}$$
 
 ---
 
@@ -127,6 +127,6 @@ $$\text{Eficiencia Predictivo} = \frac{O(n^3)}{O(n)} \approx 19.33 \text{ en pro
 
 Implementacion del algoritmo CYK basada en: [CYK Algorithm Explained - YouTube](https://youtu.be/DE2Ti-6Xcg0?si=-lHB-n1ptJGTW0SM)
 
-**Fecha de Reporte:** 16 de April de 2026  
+**Fecha de Reporte:** 17 de April de 2026  
 **Herramientas:** Python 3.x, Parser predictivo LL(1), Pillow 12.1.0  
-**Archivo CSV:** /home/antonio/Downloads/PARCIAL_LP/punto_4/resultados/mediciones_comparacion.csv
+**Archivo CSV:** C:\Users\jorge\Documents\GitHub\parcial-lp\punto_4\resultados\mediciones_comparacion.csv
