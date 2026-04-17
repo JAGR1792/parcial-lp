@@ -59,6 +59,3 @@ python3 main.py entradas/entrada.txt
 
 Ya tiene una calculadora de escritorio en `punto_5/` con `calc.lex`, `calc.yacc`, `ejemplo.txt`, `Makefile` y un `README.md` con los comandos para compilar, ejecutar y limpiar, tanto con `make` como manualmente.
 
-## Bitacora
-
-La guia para completar la bitacora esta en [overleaf/bitacora_taller.tex](overleaf/bitacora_taller.tex).
